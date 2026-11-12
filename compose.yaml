@@ -1,0 +1,14 @@
+services:
+  postgres:
+    image: 'postgres:17'
+    environment:
+      - 'POSTGRES_DB=pawse'
+      - 'POSTGRES_USER=pawse'
+      - 'POSTGRES_PASSWORD=pawse'
+    ports:
+      - '54321:5432'
+    volumes:
+      - 'pawse-db:/var/lib/postgresql/data'
+
+volumes:
+  pawse-db:
